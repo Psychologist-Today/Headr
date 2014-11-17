@@ -122,6 +122,7 @@ DEPENDENCIES
   monban
   jbuilder (~> 2.0)
   jquery-rails
+  monban
   pg
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
