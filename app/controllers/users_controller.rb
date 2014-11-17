@@ -10,15 +10,40 @@ class UsersController < ApplicationController
 
     if @user.valid?
       sign_in(@user)
-      redirect_to root_path
+      redirect_to edit_user_path(@user)
     else
       render :new
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+
+    redirect_to user_path(@user)
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(
+      :first_name,
+      :last_name,
+      :email,
+      :password,
+      :street_address,
+      :city,
+      :state,
+      :zip,
+      :phone
+    )
   end
 end
