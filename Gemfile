@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'bourbon', "~>3.2.3"
+gem 'neat', "~>1.5.1"
 gem 'coffee-rails', '~> 4.0.0'
 gem 'high_voltage', '~> 2.2.1'
 gem 'jbuilder', '~> 2.0'
