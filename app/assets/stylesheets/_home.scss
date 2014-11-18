@@ -22,34 +22,66 @@ img {
   height: auto;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Varela);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 
-$base-color: #404040;
+$base-color: #298bff;
+$gray-color: #242424;
+$form-font-family: 'Roboto Condensed', sans-serif;;
 
 body {
   font-size: 30px;
-  font-family: 'Varela', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0 auto;
   max-width: 1000px;
+  font-weight: bold;
 }
 
 header {
-  background: #298bff;
-  padding: 0.6em 0.5em;
-  color: white;
-}
-
-a {
-  color: white;
-  padding: 0.25em 0.5em;
   background: $base-color;
-  border-radius: 0.15em;
-  float: right;
-  margin: 0.3em ;
-  margin-left: 0.1em;
+  padding: 0.75em 0.75em;
+  color: white;
 }
 
 a:hover {
   color: white;
-  background: darken($base-color, 10%);
-};
+}
+
+.sign-in-button {
+  background: lighten($gray-color, 60%);
+  padding: 0.25em 0.5em;
+  border-radius: 0.15em;
+  margin-right: 0.25em;
+  text-transform: capitalize;
+}
+
+.sign-up-button {
+  background: $gray-color;
+  padding: 0.25em 0.5em;
+  border-radius: 0.15em;
+  text-transform: capitalize;
+}
+
+.sign-in-button:hover {
+  background: lighten($gray-color, 50%);
+  color: white;
+}
+
+.sign-up-button:hover {
+  background: darken($gray-color, 40%);
+}
+
+.sign {
+  float: right;
+  text-transform: capitalize;
+  color: white;
+}
+
+.container {
+  padding: 1em 0.75em 1em 0.75em;
+}
+
+form {
+  text-transform: capitalize;
+  color: $gray-color;
+}
+
