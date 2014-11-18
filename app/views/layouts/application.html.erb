@@ -8,22 +8,28 @@
 </head>
 <body>
 
-  <header>
-  <%= link_to "Psychologist Today", page_path("home") %>
-  <% if signed_in? %>
-    <div>Welcome back
-      <%= link_to " Dr. #{current_user.last_name}", user_path(current_user) %>
-    </div>
-    <%= link_to "Sign out", session_path, method: :delete %>
-  <% else %>
-    <div class="sign">
-    <%= link_to "Sign in", new_session_path, {:class => 'sign-in-button'} %>
-    <%= link_to "Sign up", new_user_path, {:class => 'sign-up-button'} %>
-    </div>
-  <% end %>
-  </header>
+  <div>
+    <header>
+    <%= link_to "Psychologist Today", page_path("home") %>
+    <% if signed_in? %>
+      <div>Welcome back
+        <%= link_to " Dr. #{current_user.last_name}", user_path(current_user) %>
+      </div>
+      <%= link_to "Sign out", session_path, method: :delete %>
+    <% else %>
+      <div class="sign">
+      <%= link_to "Sign in", new_session_path, {:class => 'sign-in-button'} %>
+      <%= link_to "Sign up", new_user_path, {:class => 'sign-up-button'} %>
+      </div>
+    <% end %>
+    </header>
 
-<%= yield %>
+    <main class="container">
+      <%= yield %>
+    </main>
+  </div>
+
+
 
 </body>
 </html>
