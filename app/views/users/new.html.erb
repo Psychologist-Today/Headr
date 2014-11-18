@@ -9,23 +9,25 @@
     </ul>
   <% end %>
 
-  <div>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
-  </div>
-  <div>
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
-  <div>
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  <div>
-    <%= form.submit "Sign up" %>
-  </div>
+  <section class="container">
+    <div>
+      <%= form.label :first_name %>
+      <%= form.text_field :first_name %>
+    </div>
+    <div>
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name %>
+    </div>
+    <div>
+      <%= form.label :email %>
+      <%= form.email_field :email %>
+    </div>
+    <div>
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+    </div>
+    <div>
+      <%= form.submit "Sign up" , {:class => 'sign-up-button'} %>
+    </div>
+  </section>
 <% end %>
