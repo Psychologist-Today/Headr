@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20141117181623) do
   enable_extension "plpgsql"
 
   create_table "users", force: true do |t|
-<<<<<<< HEAD
     t.string   "first_name",      null: false
     t.string   "last_name",       null: false
     t.string   "email",           null: false
@@ -27,11 +26,6 @@ ActiveRecord::Schema.define(version: 20141117181623) do
     t.string   "state"
     t.string   "zip"
     t.string   "phone"
-=======
-    t.string   "name",            null: false
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
->>>>>>> Adding user sign-in/sign-up using Monban and added name field to user model
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
