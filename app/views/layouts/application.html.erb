@@ -9,6 +9,9 @@
 <body>
 
   <% if signed_in? %>
+    <div>Welcome back
+      <%= link_to " Dr. #{current_user.last_name}", user_path(current_user) %>
+    </div>
     <%= link_to "Sign out", session_path, method: :delete %>
   <% else %>
     <%= link_to "Sign in", new_session_path %>

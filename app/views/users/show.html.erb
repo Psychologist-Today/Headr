@@ -9,12 +9,15 @@
 <p><%= @user.phone %></p>
 
 <div>
-  <%= button_to "Edit Profile", edit_user_path(@user) %>
-</div>
-
-<div>
-  <%= button_to "Delete Account",
-    user_path(@user),
-    method: :delete,
-    data: { confirm: "Are you sure want to delete your account?" } %>
+  <% if current_user == @user %>
+    <div>
+      <%= link_to "Edit Profile", edit_user_path(@user) %>
+    </div>
+    <div>
+      <%= button_to "Delete Account",
+        user_path(@user),
+        method: :delete,
+        data: { confirm: "Are you sure want to delete your account?" } %>
+    </div>
+  <% end %>
 </div>
