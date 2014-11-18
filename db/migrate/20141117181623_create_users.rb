@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :state
       t.string :zip
       t.string :phone
+
       t.timestamps null: false
     end
 
