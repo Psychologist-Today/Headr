@@ -1,4 +1,5 @@
 <%= form_for :session, url: session_path do |form| %>
+  <section class="container">
   <div>
     <%= form.label :email %>
     <%= form.email_field :email %>
@@ -8,6 +9,8 @@
     <%= form.password_field :password %>
   </div>
   <div>
-    <%= form.submit "Sign in" %>
+    <%= form.submit "Sign in" , :class => 'sign-in-button'%>
+    <%= link_to "Submit" , page_path("profile")%>
   </div>
+  </section>
 <% end %>

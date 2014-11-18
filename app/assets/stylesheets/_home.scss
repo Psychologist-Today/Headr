@@ -1,0 +1,87 @@
+html, body, h1, ul, li, div, img, h2, h3, form, input, span, footer, a, h4, input, form, main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+$base-color: #298bff;
+$gray-color: #242424;
+$form-font-family: 'Roboto Condensed', sans-serif;;
+
+body {
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0 auto;
+  max-width: 1000px;
+  font-weight: bold;
+}
+
+header {
+  background: $base-color;
+  padding: 0.75em 0.75em;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+.sign-in-button {
+  background: lighten($gray-color, 60%);
+  padding: 0.25em 0.5em;
+  border-radius: 0.15em;
+  margin-right: 0.25em;
+  text-transform: capitalize;
+}
+
+.sign-up-button {
+  background: $gray-color;
+  padding: 0.25em 0.5em;
+  border-radius: 0.15em;
+  text-transform: capitalize;
+}
+
+.sign-in-button:hover {
+  background: lighten($gray-color, 50%);
+  color: white;
+}
+
+.sign-up-button:hover {
+  background: darken($gray-color, 40%);
+}
+
+.sign {
+  float: right;
+  text-transform: capitalize;
+  color: white;
+}
+
+.container {
+  padding: 1em 0.75em 1em 0.75em;
+}
+
+form {
+  text-transform: capitalize;
+  color: $gray-color;
+}
+
