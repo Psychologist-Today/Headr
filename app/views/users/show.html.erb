@@ -1,6 +1,11 @@
 <section class="container">
-  <div class="info line">
+
+
     <h1 class="profile">Doctor <%= (current_user.last_name)%>, Your Profile</h1>
+    <div class="photo">
+    <img src="../../assets/docgor.jpeg">
+    </div>
+    <div class="info">
     <ul>
     <li>Name<p>Doctor <%= @user.full_name %></p></li>
     <li>Email<p><%= @user.email %></p></li>
@@ -10,18 +15,18 @@
     <%= @user.zip %></p></li>
     <li>Phone Number<p><%= @user.phone %></p></li>
     </ul>
-  </div>
     <div>
       <% if current_user == @user %>
         <div class="edit button">
           <%= link_to "Edit Profile", edit_user_path(@user) %>
         </div>
-        <div>
+        <div class="line">
           <%= button_to "Delete Account",
             user_path(@user),
             method: :delete,
             data: { confirm: "Are you sure want to delete your account?" } , id: 'delete' %>
         </div>
       <% end %>
+    </div>
     </div>
 </section>

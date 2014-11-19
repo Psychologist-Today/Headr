@@ -46,6 +46,10 @@ header .title {
   color: white;
 }
 
+.title-ha {
+  text-align: center;
+}
+
 .sign-out {
   float: right;
   text-transform: capitalize;
@@ -79,17 +83,27 @@ a:hover {
 
 .edit {
   position: absolute;
-  top: 2.15em;
+  top: 1.35em;
   right: 1em;
 }
 
 .line {
-  border-bottom: 3px solid #d3d3d3;
+  padding-top: 1em;
+  border-top: 3px solid #d3d3d3;
 }
 
 .info {
   padding: 0.75em 0;
   margin-bottom: 1em;
+  width: 65%;
+  float: right;
+}
+
+.no-info {
+  padding: 1em 0;
+  margin-bottom: 1em;
+  width: 65%;
+  margin: 0 auto;
 }
 
 p {
@@ -128,4 +142,22 @@ $red: red;
 
 .sign-in {
   background: #6DADF9;
+}
+
+.photo {
+  width: 30%;
+  float: left;
+}
+
+.photo form {
+  margin-top: 2em;
+}
+
+.save {
+  width: 100%;
+  background: pink;
+}
+
+.picture {
+  margin-top: 1em;
 }
