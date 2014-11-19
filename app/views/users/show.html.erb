@@ -1,23 +1,27 @@
-<h1>Dr. <%= @user.last_name %>'s Profile</h1>
-
-<p><%= @user.full_name %></p>
-<p><%= @user.email %></p>
-<p><%= @user.street_address %></p>
-<p><%= @user.city %></p>
-<p><%= @user.state %></p>
-<p><%= @user.zip %></p>
-<p><%= @user.phone %></p>
-
-<div>
-  <% if current_user == @user %>
+<section class="container">
+  <div class="info line">
+    <h1 class="profile">Doctor <%= (current_user.last_name)%>, Your Profile</h1>
+    <ul>
+    <li>Name<p>Doctor <%= @user.full_name %></p></li>
+    <li>Email<p><%= @user.email %></p></li>
+    <li>Address<p><%= @user.street_address %></br>
+    <%= @user.city %>,
+    <%= @user.state %>
+    <%= @user.zip %></p></li>
+    <li>Phone Number<p><%= @user.phone %></p></li>
+    </ul>
+  </div>
     <div>
-      <%= link_to "Edit Profile", edit_user_path(@user) %>
+      <% if current_user == @user %>
+        <div class="edit button">
+          <%= link_to "Edit Profile", edit_user_path(@user) %>
+        </div>
+        <div>
+          <%= button_to "Delete Account",
+            user_path(@user),
+            method: :delete,
+            data: { confirm: "Are you sure want to delete your account?" } , id: 'delete' %>
+        </div>
+      <% end %>
     </div>
-    <div>
-      <%= button_to "Delete Account",
-        user_path(@user),
-        method: :delete,
-        data: { confirm: "Are you sure want to delete your account?" } %>
-    </div>
-  <% end %>
-</div>
+</section>

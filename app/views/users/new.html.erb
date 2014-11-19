@@ -1,12 +1,14 @@
 <%= form_for @user do |form| %>
 
   <% if @user.errors.any? %>
+  <div class="error">
     <%= pluralize(@user.errors.count, "error") %> prevented your account from being created:
     <ul>
       <% @user.errors.full_messages.each do |error_message| %>
         <li><%= error_message %></li>
       <% end %>
     </ul>
+  </div>
   <% end %>
 
   <section class="container">
@@ -27,7 +29,7 @@
       <%= form.password_field :password %>
     </div>
     <div>
-      <%= form.submit "Sign up" , {:class => 'sign-up-button'} %>
+      <%= form.submit "Doctor, Sign up" %>
     </div>
   </section>
 <% end %>

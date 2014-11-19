@@ -9,39 +9,47 @@
     </ul>
   <% end %>
 
+<section class="container">
+  <div class="welcome profile">Welcome
+    <%= link_to " Dr. #{current_user.last_name}", user_path(current_user) %>,
+    please edit your profile below.
+  </div>
+  <div class="info">
   <div>
-    <%= form.label :first_name %>
+    <%= form.label :first_name, class: 'label'%>
     <%= form.text_field :first_name %>
   </div>
   <div>
-    <%= form.label :last_name %>
+    <%= form.label :last_name, class: 'label' %>
     <%= form.text_field :last_name %>
   </div>
   <div>
-    <%= form.label :email %>
+    <%= form.label :email, class: 'label'%>
     <%= form.email_field :email %>
   </div>
   <div>
-    <%= form.label :street_address %>
+    <%= form.label :street_address, class: 'label' %>
     <%= form.text_field :street_address %>
   </div>
   <div>
-    <%= form.label :city %>
+    <%= form.label :city, class: 'label' %>
     <%= form.text_field :city %>
   </div>
   <div>
-    <%= form.label :state %>
+    <%= form.label :state, class: 'label' %>
     <%= form.text_field :state %>
   </div>
   <div>
-    <%= form.label :zip %>
+    <%= form.label :zip, class: 'label' %>
     <%= form.text_field :zip %>
   </div>
   <div>
-    <%= form.label :phone %>
+    <%= form.label :phone, class: 'label' %>
     <%= form.text_field :phone %>
   </div>
-  <div>
-    <%= form.submit "Complete Profile" %>
   </div>
+  <div>
+    <%= form.submit "Save Profile" %>
+  </div>
+</section>
 <% end %>

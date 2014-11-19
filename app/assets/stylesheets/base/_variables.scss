@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
 // Typography
 $sans-serif: $helvetica;
 $serif: $georgia;
-$base-font-family: $sans-serif;
+$base-font-family: 'Roboto Condensed', serif;
 $header-font-family: $base-font-family;
 
 // Font Sizes
@@ -23,7 +25,7 @@ $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
 
 // Colors
-$blue: #477DCA;
+$blue: orange;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #DDD;
