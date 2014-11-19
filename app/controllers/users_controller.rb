@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user == current_user
+    if user_authorized?
       @user.update(user_params)
     end
 
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    if @user == current_user
+    if user_authorized?
       @user.destroy
     end
 
@@ -52,6 +52,7 @@ class UsersController < ApplicationController
       :last_name,
       :password,
       :phone,
+      :picture,
       :street_address,
       :state,
       :zip

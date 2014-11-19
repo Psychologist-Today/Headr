@@ -14,9 +14,10 @@
     <%= @user.state %>
     <%= @user.zip %></p></li>
     <li>Phone Number<p><%= @user.phone %></p></li>
+    <p>Photo: <%= image_tag @user.picture.url %>
     </ul>
     <div>
-      <% if current_user == @user %>
+      <% if user_authorized? %>
         <div class="edit button">
           <%= link_to "Edit Profile", edit_user_path(@user) %>
         </div>

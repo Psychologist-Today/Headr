@@ -52,8 +52,10 @@
     <%= form.text_field :phone %>
   </div>
   <div>
-    <%= form.submit "Save Profile", class: 'save'%>
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
   </div>
+    <%= form.submit "Save Profile", class: 'save'%>
   </div>
 </section>
 <% end %>
