@@ -46,13 +46,6 @@ header .title {
   color: white;
 }
 
-.sign {
-  float: right;
-  text-transform: capitalize;
-  padding: 0.25em 1em;
-  margin-right: -0.75em;
-}
-
 .sign-out {
   float: right;
   text-transform: capitalize;
@@ -126,4 +119,13 @@ $red: red;
   padding: 1em 1em 1em 1.25em;
   margin-bottom: 1em;
   border-radius: 0.15em;
+}
+
+.search {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.sign-in {
+  background: #6DADF9;
 }

@@ -14,13 +14,13 @@
 
   <% if signed_in? %>
     <div class="sign-out">
-    <%= link_to "Sign out", session_path, method: :delete, class: 'button' %>
+    <%= link_to "Sign out", session_path, method: :delete, class: 'button secondary' %>
     <%= link_to "Profile", user_path(current_user), class: 'button' %>
     </div>
 
   <% else %>
-    <div class="sign">
-    <%= link_to "Sign in", new_session_path, class: 'button' %>
+    <div class="sign-out">
+    <%= link_to "Sign in", new_session_path, class: 'button sign-in' %>
     <%= link_to "Doctor, Sign up", new_user_path , class: 'button' %>
     </div>
   <% end %>
