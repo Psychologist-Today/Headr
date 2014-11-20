@@ -14,8 +14,8 @@
 
   <% if signed_in? %>
     <div class="sign-out">
-    <%= link_to "Sign out", session_path, method: :delete, class: 'button secondary' %>
     <%= link_to "Profile", user_path(current_user), class: 'button' %>
+    <%= link_to "Sign out", session_path, method: :delete, class: 'button secondary' %>
     </div>
   <% else %>
     <div class="sign-out">

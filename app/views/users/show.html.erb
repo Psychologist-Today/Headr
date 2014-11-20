@@ -3,30 +3,29 @@
 
     <h1 class="profile">Doctor <%= (current_user.last_name)%>, Your Profile</h1>
     <div class="photo">
-    <img src="../../assets/docgor.jpeg">
+      <p class="label">Photo: <%= image_tag @user.picture.url , class: 'picture' %></p>
     </div>
     <div class="info">
     <ul>
-    <li>Name<p>Doctor <%= @user.full_name %></p></li>
-    <li>Email<p><%= @user.email %></p></li>
-    <li>Address<p><%= @user.street_address %></br>
-    <%= @user.city %>,
-    <%= @user.state %>
-    <%= @user.zip %></p></li>
-    <li>Phone Number<p><%= @user.phone %></p></li>
-    <p>Photo: <%= image_tag @user.picture.url %>
+      <li>Name<p>Doctor <%= @user.full_name %></p></li>
+      <li>Email<p><%= @user.email %></p></li>
+      <li>Address<p><%= @user.street_address %></br>
+      <%= @user.city %>,
+      <%= @user.state %>
+      <%= @user.zip %></p></li>
+      <li>Phone Number<p><%= @user.phone %></p></li>
     </ul>
     <div>
       <% if user_authorized? %>
-        <div class="edit button">
-          <%= link_to "Edit Profile", edit_user_path(@user) %>
-        </div>
-        <div class="line">
-          <%= button_to "Delete Account",
-            user_path(@user),
-            method: :delete,
-            data: { confirm: "Are you sure want to delete your account?" } , id: 'delete' %>
-        </div>
+    <div class="edit button">
+      <%= link_to "Edit Profile", edit_user_path(@user) %>
+    </div>
+    <div class="line">
+      <%= button_to "Delete Account",
+        user_path(@user),
+        method: :delete,
+        data: { confirm: "Are you sure want to delete your account?" } , id: 'delete' %>
+    </div>
       <% end %>
     </div>
     </div>

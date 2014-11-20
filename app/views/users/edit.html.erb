@@ -14,9 +14,9 @@
     <%= link_to " Dr. #{current_user.last_name}", user_path(current_user) %>,
     please edit your profile below.
   </div>
-  <div class="photo">
-  <img src="../../assets/docgor.jpeg">
-  <%= form.submit "Edit Profile Photo", class: 'picture' %>
+  <div>
+    <p class="photo"><%= image_tag @user.picture.url %>
+    <%= form.file_field :picture %>
   </div>
   <div class="info">
   <div>
@@ -52,9 +52,6 @@
     <%= form.text_field :phone %>
   </div>
   <div>
-    <%= form.label :picture %>
-    <%= form.file_field :picture %>
-  </div>
     <%= form.submit "Save Profile", class: 'save'%>
   </div>
 </section>

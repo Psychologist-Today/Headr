@@ -1,7 +1,9 @@
-<h1>Search Results for <%= params[:location_query] %></h1>
+<section class="container">
+  <h1 class="profile">Search Results for <%= params[:location_query] %></h1>
 
-<% if @location_results.present? %>
-  <%= render @location_results %>
-<% else %>
-  <p>Sorry, there are no registered psychologists in your city.</p>
-<% end %>
+  <% if @location_results.present? %>
+    <%= render @location_results %>
+  <% else %>
+    <p>Sorry, there are no registered psychologists in your city.</p>
+  <% end %>
+</section>
