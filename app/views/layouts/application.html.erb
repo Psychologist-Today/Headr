@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1 class="title">
-      <%= link_to "Psychologist Today", page_path("home")%>
+      <%= link_to "Psychologist Today", landings_path %>
     </h1>
 
   <% if signed_in? %>
@@ -17,7 +17,6 @@
     <%= link_to "Sign out", session_path, method: :delete, class: 'button secondary' %>
     <%= link_to "Profile", user_path(current_user), class: 'button' %>
     </div>
-
   <% else %>
     <div class="sign-out">
     <%= link_to "Sign in", new_session_path, class: 'button sign-in' %>
