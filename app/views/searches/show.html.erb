@@ -1,9 +1,15 @@
 <section class="container">
+<% if @location_results.present? %>
   <h1 class="profile">Search Results for <%= params[:location_query] %></h1>
+  <%= render @location_results %>
+<% elsif params[:location_query] != "" %>
+  <p>Sorry, there are no registered psychologists in your city.</p>
+<% end %>
 
-  <% if @location_results.present? %>
-    <%= render @location_results %>
-  <% else %>
-    <p>Sorry, there are no registered psychologists in your city.</p>
-  <% end %>
+<% if @name_results.present? %>
+  <h1 class="profile">Search Results for <%= params[:last_name_query] %></h1>
+  <%= render @name_results %>
+<% elsif params[:last_name_query] != "" %>
+  <p>Sorry, there are no registered psychologists by that name.</p>
+<% end %>
 </section>
