@@ -18,4 +18,12 @@ class User < ActiveRecord::Base
   def self.location_search(user_ids)
     User.where(id: user_ids)
   end
+
+  def self.search_by_name(last_name_query)
+    User.where("last_name ILIKE ?", "#{last_name_query}")
+  end
+
+  def self.name_search(user_ids)
+    User.where(id: user_ids)
+  end
 end

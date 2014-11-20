@@ -6,15 +6,10 @@
         params[:location_query],
         placeholder: "Search by Location",
         class: "label" %>
-      <%= label_tag(:specialty_query, "Specialty", class: "label") %>
-      <%= search_field_tag :specialty_query,
-        params[:specialty_query],
-        placeholder: "Search by Specialty",
-        class: "label" %>
-      <%= label_tag(:insurance_query, "Insurance", class: "label") %>
-      <%= search_field_tag :insurance_query,
-        params[:insurance_query],
-        placeholder: "Search by Insurance",
+      <%= label_tag(:last_name_query, "Last Name", class: "label") %>
+      <%= search_field_tag :last_name_query,
+        params[:last_name_query],
+        placeholder: "Search by Doctor's Last Name",
         class: "label" %>
       <%= submit_tag "Find Me A Doctor", class: "search" %>
     <% end %>
