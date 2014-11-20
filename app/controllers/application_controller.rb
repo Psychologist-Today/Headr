@@ -9,8 +9,4 @@ class ApplicationController < ActionController::Base
   def user_authorized?
     @user == current_user
   end
-
-  def current_user
-    super || Guest.new
-  end
 end
