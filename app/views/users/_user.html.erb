@@ -1,2 +1,9 @@
+<div class="results group">
+
+  <%= link_to image_tag user.picture.url, class:"photo photo-list"%>
+
 <%= link_to user.full_name, user_path(user), class:"list" %>
-<%= link_to image_tag user.picture.url, class:"photo photo-list"%>
+
+ <%= link_to "View Doctor", user_path(user), class: 'view button' %>
+
+</div>
