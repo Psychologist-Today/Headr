@@ -10,4 +10,12 @@ class User < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def self.search_by_location(location_query)
+    User.where("city ILIKE ?", "#{location_query}")
+  end
+
+  def self.location_search(user_ids)
+    User.where(id: user_ids)
+  end
 end
