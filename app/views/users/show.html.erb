@@ -1,7 +1,7 @@
 <section class="container">
 
 
-    <h1 class="profile">Doctor <%= (current_user.last_name)%>, Your Profile</h1>
+    <h1 class="profile">Doctor <%= (@user.last_name)%>'s Profile</h1>
     <div class="photo">
       <p class="label">Photo: <%= image_tag @user.picture.url , class: 'picture' %></p>
     </div>
