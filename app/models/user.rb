@@ -11,12 +11,10 @@ class User < ActiveRecord::Base
   end
 
   def self.location_search(location_query)
-    user_ids = User.where("city ILIKE ?", "#{location_query}")
-    User.where(id: user_ids)
+    User.where("city ILIKE ?", "#{location_query}")
   end
 
   def self.name_search(last_name_query)
-    user_ids = User.where("last_name ILIKE ?", "#{last_name_query}").pluck(:id)
-    User.where(id: user_ids)
+    User.where("last_name ILIKE ?", "#{last_name_query}")
   end
 end
